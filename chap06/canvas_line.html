@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my canvas</title>
+</head>
+<style>
+
+</style>
+<body>
+<canvas id="myCanvas" width="1200" height="800" style="border: 1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+
+ /*   ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+*/
+    var drawLine=function() {
+        var lineCap=["butt","round","square"];
+        for(var i=1; i<5; i++) {
+            ctx.beginPath();
+            ctx.moveTo(100,100*i);
+            ctx.lineWidth=5*i;
+            ctx.lineCap=lineCap[i-1];
+            ctx.lineTo(200,100*i);
+            ctx.stroke();
+        }
+    }
+    drawLine();
+</script>
+</body>
+</html>

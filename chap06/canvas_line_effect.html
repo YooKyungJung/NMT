@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my canvas</title>
+</head>
+<style>
+
+</style>
+<body>
+<canvas id="myCanvas" width="1200" height="800" style="border: 1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+    var canvas=document.getElementById("myCanvas");
+    var context=canvas.getContext("2d");
+
+    context.lineWidth=20;
+    context.strokeStyle='#0000ff';
+    //butt line cap(top line)
+    context.beginPath();
+    context.moveTo(100,canvas.height/2-50);
+    context.lineTo(canvas.width-200, canvas.height/2-50);
+    context.lineCap='butt';
+    context.stroke();
+    //butt line cap(middle line)
+    context.beginPath();
+    context.moveTo(100,canvas.height/2);
+    context.lineTo(canvas.width-200, canvas.height/2);
+    context.lineCap='round';
+    context.stroke()
+    //butt line cap(bottom line)
+    context.beginPath();
+    context.moveTo(100,canvas.height/2+50);
+    context.lineTo(canvas.width-200, canvas.height/2+50);
+    context.lineCap='square';
+    context.stroke()
+</script>
+</body>
+</html>
