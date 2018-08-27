@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<style>
+    h1, h2 { font-style: italic; } /*선택자 그룹*/
+    body em { color:lightcoral; }/*하위 선택자*/
+    body > em { color:lightskyblue; } /*동작안함: 바로 하위X*/
+    body > h4 > em { color:lightskyblue; } /*동작(앞에 body 굳이 안써도 O 되는지 test한거임)*/
+    input[required] {background-color: olive;} /*속성 선택자*/
+    a:link { color:black; }
+    a:hover { color:black; }
+    a:visited { color:black; }
+</style>
+<body>
+    <h1>헤딩 h1입니다.</h1>
+    <h2>헤딩 h2입니다.</h2>
+    <h3>헤딩 h3입니다.</h3>
+    <h4>This Headline is <em>very</em> important</h4>
+    필수입력 <input type="text" required>
+    <ul>
+        <li><a target="iframe1" href="coldBrew.html">콜드브루</a></li>
+        <li><a target="iframe1" href="esspresso.html">에스프레소</a></li>
+        <li><a target="iframe1" href="tea.html">티</a></li>
+        <li><a target="iframe1" href="bottle.html">주스(병음료</a></li>
+    </ul>
+    <div class="yellow_box">
+        <span>yellow_box입니다.</span>
+    </div>
+    <div class="orange_box">
+        <span>orange_box입니다.</span>
+    </div>
+    <div>
+        <span id="red_box">red_box입니다.</span>
+    </div>
+</body>
+</html>

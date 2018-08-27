@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="euc-kr">
+    <title>output</title>
+</head>
+<style>
+    body{
+        width: 80%;
+        font-family: sans-serif;
+        background-color: white;
+        margin: auto;
+    }
+    fieldset {
+        width:500px;
+    }
+    legend {
+        color:black;
+        font-size: 1.2em;
+    }
+    input {
+        width: 150px;
+        margin: 5px 5px 5px 5px;
+    }
+    label {
+        width:120px;
+        font-weight: bold;
+        float: left;
+        color: blue;
+        padding: 5px 5px 5px 5px;
+    }
+</style>
+<script>
+    function gotoUrl() {
+        var url="http://"+document.getElementById("url").value;
+        open(url); //open메소드는 url 모두 줘야함 http://
+    }
+</script>
+<body>
+ <fieldset>
+  <form name="myForm">
+    <legend>이동</legend>
+    <label>Goto</label>http://<input type="text" id="url" name="homepage" list="homepage" autofocus>
+    <datalist id="homepage">
+     <option value="www.google.co.kr">구글</option>
+     <option value="www.naver.com">네이버</option>
+     <option value="www.daum.net">다음</option>
+    </datalist>
+    <input type="submit" value="이동" onclick="gotoUrl()">
+  </form>
+ </fieldset>
+ <br>
+
+ <fieldset>
+  <details>
+    <summary>과일 사과 레포트</summary>
+    사과는 장미 종 맬 러스 domestica, 사과 나무의 pomaceous 과일입니다.
+  </details>
+ </fieldset>
+<br>
+
+ <fieldset>
+    <pre>
+     <code>function Panel(element, canClose, closeHandler) {
+         this.element = element;
+         this.canClose = canClose;
+         this.closeHandler = function() { if(closeHandler) closeHandler() };
+     </code>
+    </pre>
+    <br>
+    <p>컴퓨터를 하던 중 <samp>the system encountered a problem(#707)</samp>라는 에러 메시지가 떴다.</p>
+    <p><var>n</var>의 수만큼 곱하시오.</p>
+ </fieldset>
+</body>
+</html>

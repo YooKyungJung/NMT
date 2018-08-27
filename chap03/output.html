@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="euc-kr">
+    <title>output</title>
+</head>
+<style>
+    label {font-weight: bold; color:blueviolet; width: 70px;}
+    input { width: 100px;}
+</style>
+<script>
+    function calculate() {
+        var keynum=document.getElementById("keynum").value;
+        //alert(keynum);
+        keyprice=keynum*1000;
+        document.getElementById("price").value=keyprice+"원";
+    }
+</script>
+<body>
+
+<form id="myForm" oninput="calculate()">
+ <label for "keynum">키보드</label>
+ <input type="number" min="0" max="100" id="keynum"><br>
+ <output id="price"></output>
+</form>
+</body>
+</html>

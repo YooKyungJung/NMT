@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="euc-kr">
+    <title>추가 속성 테스트</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        font-size: 10pt;
+        width:80%;
+        background-color: white;
+        margin: auto;
+    }
+    #formTest02 {
+        width:400px;
+        background-color: white;
+        margin: 10px 5px 0px 5px;
+        padding: 15px;
+    }
+    lable { width: 120px; font-weight: bold; float:left; color:darkgreen;}
+    input {
+        padding: 5px;
+        margin: 3px 3px 3px 3px;
+        width: 200px;
+    }
+    section { 
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 270px;
+        padding: 10px;
+    }
+</style>
+<body>
+<div id="formTest02">
+<form action="" method="post">
+<fieldset>
+ <legend><h4>추가 속성 테스트</h4></legend>
+ <lable>date: </lable> <input type="date" name="date" size="30"><br>
+ <lable>datetime-local: </lable> <input type="datetime-local" name="datetime_local" size="30"><br>
+ <lable>month: </lable> <input type="month" name="month"><br>
+ <lable>time: </lable> <input type="time" name="time"><br>
+ <lable>week: </lable> <input type="week" name="week"><br>
+ <lable>color: </lable> <input type="color" name="color"><br>
+ <lable>email: </lable> <input type="email" name="email"><br>
+ <lable>tel: </lable> <input type="tel" name="tel" placeholder="###-####-####" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+ <lable>search: </lable> <input type="search" name="search"><br>
+ <lable>range: </lable> <input type="range" name="range"><br>
+ <lable>number: </lable> <input type="number" name="number"><br>
+ <lable>url: </lable> <input type="url" name="url"><br>
+</fieldset>
+
+<fieldset>
+ <select name="size">
+  <optgroup label="female">
+   <option value="225">225mm</option>
+   <option value="230">230mm</option>
+   <option value="235">235mm</option>
+     </optgroup>
+ </select>
+ <select name="size">
+  <optgroup label="male">
+   <option value="255">255mm</option>
+   <option value="260">260mm</option>
+   <option value="265">265mm</option>
+  </optgroup>
+    </select>
+</fieldset>
+
+<fieldset>
+ <meter value="2" min="0" max="10">2 out of 10</meter>
+ <meter value="0.6">60%</meter>
+ <br>
+ Downloading
+ <progress value="5000" max="10000">
+   <span id="status">50</span>%
+ </progress>
+</fieldset>
+
+
+</form>
+</div>
+</body>
+</html>

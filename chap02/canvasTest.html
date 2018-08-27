@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="euc-kr">
+    <title>figure 연습</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="600" height="400">
+     이 브라우저는 캔버스를 지원하지 않습니다.
+    </canvas>
+    <script>
+     window.onload = init;
+     //window.onload = function() {}
+     function init() {
+        mycanvas=document.getElementById("mycanvas");
+        ctx=mycanvas.getContext("2d");
+        ctx.fillStyle="pink";
+        ctx.fillRect(10,10,200,300);
+        ctx.fillStyle="skyblue";
+        ctx.fillRect(210,10,200,300);
+        ctx.fillStyle="green";
+        ctx.beginPath();
+        ctx.arc(480,160,70,0,2*Math.PI, true);
+        ctx.closePath();
+        ctx.fill();
+
+     }
+    </script>
+</body>
+</html>
