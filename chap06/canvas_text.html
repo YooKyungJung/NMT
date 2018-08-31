@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my canvas</title>
+</head>
+<style>
+
+</style>
+<body>
+<canvas id="myCanvas" width="1200" height="800" style="border: 1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var cvas = canvas.getContext("2d");
+
+    cvas.font = "30px Gothic";
+    cvas.fillStyle = "rgba(0,0,255,0.8)";
+    cvas.shadowColor = "rgba(30,30,30,0.9)";
+    cvas.shadowOffsetX = "5";
+    cvas.shadowOffsetY = "5";
+    cvas.shadowBlur = "15";
+
+    cvas.textAlign = "start";
+    cvas.fillText("홍길동", 150, 30);
+
+    cvas.textAlign = "end";
+    cvas.fillText("홍길동", 150, 70);
+
+    cvas.textAlign = "left";
+    cvas.fillText("홍길동", 150, 110);
+
+    cvas.textAlign = "center";
+    cvas.fillText("홍길동", 150, 150);
+
+    cvas.textAlign = "right";
+    cvas.fillText("홍길동", 150, 190);
+
+    cvas.textAlign = "center";
+    cvas.strokeStyle="#000000";
+    cvas.strokeText("홍길동", 150, 240);
+
+
+</script>
+</body>
+</html>
