@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my canvas</title>
+</head>
+<style>
+
+</style>
+<body>
+<canvas id="myCanvas" width="1200" height="800" style="border: 1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var x=10;
+    var y=canvas.height/2; //400
+
+    ctx.beginPath();
+    ctx.moveTo(x,y);
+    ctx.lineTo(canvas.width-10, y);
+    ctx.stroke();
+
+    ctx.font='bold 20px Calibri';
+
+    ctx.textBaseline='middle';
+    ctx.fillText('middle',x,y);
+    alert(x); alert(y); //10,400
+    x+=ctx.measureText('middle').width;
+    alert(x); alert(y); //10,400
+    //y+=ctx.measureText('middle').height; 높이는 불가
+
+    ctx.textBaseline='top';
+    ctx.fillText('top',x,y);
+    x+=ctx.measureText('top').width;
+
+    ctx.textBaseline='bottom';
+    ctx.fillText('bottom',x,y);
+    x+=ctx.measureText('bottom').width;
+
+    ctx.textBaseline='alphabetic';
+    ctx.fillText('alphabetic',x,y);
+    x+=ctx.measureText('alphabetic').width;
+
+    ctx.textBaseline='hanging';
+    ctx.fillText('hanging',x,y);
+    x+=ctx.measureText('hanging').width;
+
+    ctx.textBaseline='ideographic';
+    ctx.fillText('ideographic',x,y);
+    x+=ctx.measureText('ideographic').width;
+</script>
+</body>
+</html>
