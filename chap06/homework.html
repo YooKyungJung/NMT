@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my canvas</title>
+</head>
+<style>
+</style>
+<body>
+<canvas id="myCanvas" width="1200" height="800" style="border: 1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var cvas = canvas.getContext("2d");
+
+    cvas.font = "bold 100px Gothic";
+    cvas.fillStyle="rgba(223,51,51,1)";
+    cvas.fillText("HTML", 66, 100);
+    cvas.closePath();
+
+    cvas.fillStyle="rgba(255,78,78,1)";
+    cvas.beginPath();
+    cvas.moveTo(35,134);
+    cvas.lineTo(373,134);
+    cvas.lineTo(347,473);
+    cvas.lineTo(206,517);
+    cvas.lineTo(65,473);
+    cvas.fill();
+    cvas.closePath();
+    
+    cvas.fillStyle="rgba(243,141,141,1)";
+    cvas.beginPath();
+    cvas.moveTo(205,162);
+    cvas.lineTo(350,162);
+    cvas.lineTo(326,453);
+    cvas.lineTo(205,487);
+    cvas.fill();
+    cvas.closePath();
+
+    cvas.fillStyle="rgba(251,237,234,1)";
+    cvas.beginPath(205,203);
+    cvas.lineTo(205,244);
+    cvas.lineTo(142,244);
+    cvas.lineTo(147,294);
+    cvas.lineTo(205,294);
+    cvas.lineTo(205,335);
+    cvas.lineTo(110,335);
+    cvas.lineTo(99,204);
+    cvas.lineTo(205,203);
+    cvas.fill();
+    cvas.closePath();
+
+    cvas.fillStyle="rgba(251,237,234,1)";
+    cvas.beginPath(112,354);
+    cvas.lineTo(152,354);
+    cvas.lineTo(155,388);
+    cvas.lineTo(205,401);
+    cvas.lineTo(205,444);
+    cvas.lineTo(118,422);
+    cvas.lineTo(112,354);
+    cvas.fill();
+    cvas.closePath();
+
+    cvas.fillStyle="rgba(255,255,255,1)";
+    cvas.beginPath(205,203);
+    cvas.lineTo(312,203);
+    cvas.lineTo(308,245);
+    cvas.lineTo(205,244);
+    cvas.lineTo(205,203);
+    cvas.fill();
+    cvas.closePath();
+
+     cvas.fillStyle="rgba(255,255,255,1)";
+    cvas.beginPath(205,294);
+    cvas.lineTo(304,295);
+    cvas.lineTo(294,420);
+    cvas.lineTo(204,444);
+    cvas.lineTo(204,400);
+    cvas.lineTo(257,386);
+    cvas.lineTo(260,335);
+    cvas.lineTo(205,335);
+    cvas.lineTo(205,294);
+    cvas.fill();
+    cvas.closePath();
+</script>
+</body>
+</html>
