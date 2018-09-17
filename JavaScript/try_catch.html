@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style></style>
+    <script>
+        var msg="";
+        function test() {
+            try {
+                alert("Hello");
+            } catch(error) {
+                msg="다음과 같은 오류가 발생하였음"+error.message;
+                alert(msg);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="try-catch" onclick="test()">
+</body>
+</html>
